@@ -2,7 +2,7 @@
 
 [animint2](https://cran.r-project.org/web/packages/animint2/) est un package R pour la visualisation de données.
 <!-- comment -->
-Ce dépôt herberge [la galerie pour animint2](https://animint.github.io/gallery/), qui contient exemples de visualisations créées avec `animint2`.
+Ce dépôt herberge [la galerie en français pour animint2](https://animint.github.io/gallery-fr/), qui contient exemples de visualisations créées avec `animint2`.
 Nous encourageons les contributions !
 
 <!-- comment -->
