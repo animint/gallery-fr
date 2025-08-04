@@ -27,31 +27,34 @@ myread <- function(csv, repo.col){
   , img.png := sprintf("repos/%s.png", viz_owner_repo)
   ][
   , viz.link := ahref(
-    sprintf("https://%s.github.io/%s/", owner, repo_only),
-    ifelse(
-      file.exists(img.png),
-      sprintf('<img src="%s" alt="%s" />', img.png, viz_owner_repo),
-      viz_owner_repo)
-  )][
+      sprintf("https://%s.github.io/%s/", owner, repo_only),
+      ifelse(
+        file.exists(img.png),
+        sprintf('<img src="%s" alt="%s" />', img.png, viz_owner_repo),
+        viz_owner_repo))
+  ][
   , repo.link := ahref(
     sprintf("https://github.com/%s/tree/gh-pages", viz_owner_repo),
-    get(repo.col))
-  ]
+    "repo")
+  ][]
 }
-meta.dt <- myread("meta.csv", "title")[
-  , source.link := ahref(
-    source,
-    commit.POSIXct)
+meta.dt <- myread("meta.csv")[, let(
+  source.link = ahref(source, "source"),
+  video.link = ifelse(video=="", "", ahref(video,  "video"))
+)][
+, links := paste(repo.link, source.link, video.link)
+][
+  order(-add.POSIXct)
 ]
 error.dt <- myread("error.csv", "viz_owner_repo")
 ```
 
 ```{r}
-knitr::kable(meta.dt[order(-commit.POSIXct), .(
-  viz.link, repo.link, source.link
+knitr::kable(meta.dt[, .(
+  viz.link, title, links
 )])
 download <- function(csv){
-  cat(ahref(csv, paste("Télécharger ce tableau : ", csv)))
+  cat(ahref(csv, paste("Télécharger ce tableau :", csv)))
 }
 download("meta.csv")
 ```
