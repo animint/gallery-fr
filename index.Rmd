@@ -18,7 +18,9 @@ ahref <- function(href, text){
 
 ```{r}
 myread <- function(csv, repo.col){
-  input.dt <- fread(csv)
+  suppressWarnings({
+    input.dt <- fread(csv)
+  })
   if(nrow(input.dt)==0)return(NULL)
   nc::capture_first_df(
     input.dt,
