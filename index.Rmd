@@ -3,14 +3,14 @@ title: La galerie en français pour animint2
 output: html_document
 ---
 
-Ceci est une galerie de visualisations de données pour mettre en evidence les fonctionallités du package [animint2](https://github.com/animint/animint2).
+Ceci est une galerie de visualisations de données pour mettre en evidence les fonctionnalités du package [animint2](https://github.com/animint/animint2).
 
 ```{r Ropts, echo=FALSE}
 options(width=200)
 knitr::opts_chunk$set(
   echo=FALSE,
   results="asis")
-library(data.table)
+suppressPackageStartupMessages(library(data.table))
 ahref <- function(href, text){
   sprintf('<a href="%s">%s</a>', href, text)
 }
