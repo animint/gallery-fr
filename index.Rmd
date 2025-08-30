@@ -4,6 +4,7 @@ output: html_document
 ---
 
 Ceci est une galerie de visualisations de données pour mettre en evidence les fonctionnalités du package [animint2](https://github.com/animint/animint2).
+Les visualisations en-dessous sont des traductions en français des visualisations [du galérie en anglais](https://animint.github.io/gallery/).
 
 ```{r Ropts, echo=FALSE}
 options(width=200)
