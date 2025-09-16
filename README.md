@@ -1,55 +1,65 @@
-# animint2 Gallery
+# La galerie en français pour `animint2`
 
-[animint2](https://cran.r-project.org/web/packages/animint2/) is an R package for animated and interactive data visualizations.
+[animint2](https://cran.r-project.org/web/packages/animint2/) est un package R pour la visualisation de données.
 <!-- comment -->
-This repository is for the [animint2 gallery](https://animint.github.io/gallery/), which showcases examples of what `animint2` can do. Additions to the gallery are encouraged.
-
-<!-- comment -->
-
-## How to Contribute
+Ce dépôt herberge [la galerie en français pour animint2](https://animint.github.io/gallery-fr/), qui contient exemples de visualisations créées avec `animint2`.
+Nous encourageons les contributions !
 
 <!-- comment -->
 
-### Make a Data Viz
+## Comment contribuer
 
 <!-- comment -->
 
-1. First, run `install.packages("animint2")` in R to get the most recent version from CRAN (>= 2023.11.21). The most recent versions support the `source` option for the `animint()` function, which is required to publish an animint to a gallery.
-<!-- comment -->
-2. Create a data `viz = animint(ggplots, title="data viz title", source="https://link.to/your_code.R")` object with options:
-<!-- comment -->
-  * `title`: Replace the example text with a string describing the data viz.
-<!-- comment -->
-  * `source`: Replace the example URL with the URL of your data viz source code.
-<!-- comment -->
-3. Run `animint2pages(viz, "new_github_repo")` to create a new GitHub repository with your viz deployed in the gh-pages branch. For more detailed instructions, see [the subsection about publishing to GitHub Pages in Chapter 5 of The animint2 Manual](https://rcdata.nau.edu/genomic-ml/animint2-manual/Ch05-sharing.html#pages).
-<!-- comment -->
-4. Take a screenshot of the data viz, name it `Capture.PNG`, and add it to the gh-pages branch of that repo.
+### Créer une visualisation
 
 <!-- comment -->
 
-### Add your Data Viz to the Gallery
+1. Utiliser `install.packages("animint2")` dans R pour installer la version actuelle du CRAN (>= 2023.11.21). Les versions récentes permettent l'option `source` pour la fonction `animint()`, qui est nécessaire pour publier une visualisation dans un galerie.
+<!-- comment -->
+2. Créer une visualisation `vis = animint(ggplots, title="titre", source="https://lien.vers/votre_code.R")` avec options :
+<!-- comment -->
+  * `title`: un titre ou description pour votre visualisation.
+<!-- comment -->
+  * `source`: l'URL du code source pour votre visualisation.
+<!-- comment -->
+3. Utiliser `animint2pages(viz, "ma_vis_dans_un_dépôt_github")` pour créer un nouveau dépôt avec votre visualisation dans la branch `gh-pages`. Voir les instructions détaillées dans [la partie GitHub Pages du Chapitre 5 du manuel pour animint2](https://rcdata.nau.edu/genomic-ml/animint2-manual/Ch05-sharing.html#pages).
+<!-- comment -->
+4. Faire un capture d'écran de votre visualisation, nommé `Capture.PNG`, et le rajouter dans la branche `gh-pages` du dépôt.
 
 <!-- comment -->
 
-In the following instructions, replace `YOUR_GITHUB_USERNAME` with your GitHub username.
+### Rajouter votre visualisation au galérie
 
 <!-- comment -->
 
-1. If you have not yet forked the gallery, then [fork the gallery](https://github.com/animint/gallery/fork). Make sure your fork includes the `gh-pages` branch. This makes a copy of the animint2 gallery and places it on your list of repositories.
-<!-- comment -->
-2. If you have not yet cloned your fork, then clone it with `git clone git@github.com:YOUR_GITHUB_USERNAME/gallery ~/R/gallery`. This copies your fork from GitHub onto your local machine.
-<!-- comment -->
-3. Add `YOUR_GITHUB_USERNAME/new_github_repo` on a new line in `repos.txt`. The `new_github_repo` should be the same name that you used when you published a data viz `animint2pages`.
-<!-- comment -->
-4. Run `animint2::update_gallery()` to update and push the changes to the `gh-pages` branch of your fork.
-<!-- comment -->
-5. After a few minutes, your updated gallery will appear on https://YOUR_GITHUB_USERNAME.github.io/gallery/.
-<!-- comment -->
-6. Open a pull request from your fork's `gh-pages` branch (head/compare) into the animint/gallery `gh-pages` branch (base) by clicking the "Contribute" button on your fork's GitHub web page or via a URL like https://github.com/animint/gallery/compare/gh-pages...YOUR_GITHUB_USERNAME:gallery:gh-pages?expand=1.
-<!-- comment -->
-7. Make sure your pull request description has a link to the rendered version of your fork of the gallery, such as https://YOUR_GITHUB_USERNAME.github.io/gallery/. That way, reviewers can quickly preview what the new gallery would look like after merging the pull request.
+En-dessous, SVP remplacer `VOTRE_PSEUDO_GITHUB` avec votre username sur GitHub.
 
 <!-- comment -->
 
-For more info about galleries, go to [Chapter 5 of The animint2 Manual and read the subsection on organizing animints in a gallery](https://rcdata.nau.edu/genomic-ml/animint2-manual/Ch05-sharing.html#gallery).
+1. Si nécessaire, créer votre [copie (fork) du galérie](https://github.com/animint/gallery/fork). S'assurer que votre copie (fork) contient la branche `gh-pages`. Ceci fait une copie du galérie sur votre liste de dépôts sur GitHub.
+<!-- comment -->
+2. Si vous avez pas encore une copie (fork) local, SVP faire `git clone git@github.com:VOTRE_PSEUDO_GITHUB/gallery-fr ~/R/gallery-fr`. Ceci fait une copie (fork) dans votre ordinateur.
+<!-- comment -->
+3. Rajouter `VOTRE_PSEUDO_GITHUB/ma_vis_dans_un_dépôt_github` sur une nouvelle ligne dans `repos.txt`. S'assurer que `ma_vis_dans_un_dépôt_github` est le même nom que vous avez utilisé avec `animint2pages`.
+<!-- comment -->
+4. Faire `animint2::update_gallery("~/R/gallery-fr")` pour faire la mise à jour du galerie, et ensuite pousser les modifications vers la branche `gh-pages` de votre copie (fork) sur GitHub.
+<!-- comment -->
+5. Après quelques minutes, vos mises à jour s'affichent sur <https://VOTRE_PSEUDO_GITHUB.github.io/gallery-fr/>.
+<!-- comment -->
+6. Ouvrir une requête de tirage (pull request),
+
+* depuis la branche `gh-pages` de votre copie (head/compare)
+* avec destination la branche `gh-pages` du dépôt principal,  `animint/gallery-fr` (base)
+* en cliquant "Contribute" sur le page GitHub de votre copie (fork),
+* ou utiliser un URL comme <https://github.com/animint/gallery-fr/compare/gh-pages...VOTRE_PSEUDO_GITHUB:gallery-fr:gh-pages?expand=1>
+
+<!-- comment -->
+7. S'assurer que votre requête de tirage (pull request) contient
+
+* un lien vers la version rendu de votre copie (fork) du galerie, par exemple <https://VOTRE_PSEUDO_GITHUB.github.io/gallery-fr/>, pour faciliter la relecture.
+* un lien vers la nouvelle visualisation que vous proposer, par exemple <https://VOTRE_PSEUDO_GITHUB.github.io/ma_vis_dans_un_dépôt_github/>.
+
+<!-- comment -->
+
+Voir les instructions détaillées dans [la partie "Organizing animints in a gallery" du Chapitre 5 du manual pour animint2](https://rcdata.nau.edu/genomic-ml/animint2-manual/Ch05-sharing.html#gallery).
