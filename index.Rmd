@@ -19,6 +19,7 @@ ahref <- function(href, text){
 
 ```{r}
 myread <- function(csv, repo.col){
+  if(!file.exists(csv))return(NULL)
   suppressWarnings({
     input.dt <- fread(csv)
   })
