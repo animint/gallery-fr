@@ -1,3 +1,4 @@
+tdhock/2026-09-08-sur-sous-apprentissage-validation
 tdhock/2026-09-04-sur-sous-apprentissage-test-neighbors
 tdhock/2026-09-02-sur-sous-apprentissage
 tdhock/2025-08-BanqueMondiale-facets-map
